@@ -5,12 +5,12 @@ from sklearn.pipeline import Pipeline
 
 
 def main():
-    '''
+    """
     Data cleaning script
     Pipeline:
     1. Drop columns
     2. Change incorrect 29.02 date to 01.03
-    '''
+    """
     logging.basicConfig(
         level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
     )
