@@ -88,6 +88,10 @@ def main():
     logging.info("Columns after feature engineering:\n%s", df_train.columns)
     logging.info("Data info after feature engineering:\n%s", df_train.info())
 
+    logging.info("Saving data...")
+    df_train.to_csv("data/final_train.csv", index=False)
+    df_test.to_csv("data/final_test.csv", index=False)
+
 
 if __name__ == "__main__":
     main()
