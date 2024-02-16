@@ -33,8 +33,8 @@ def main():
         "C": [1, 2, 3, 4, 6],
         "gamma": ["scale", "auto"],
         "kernel": ["rbf", "sigmoid"],
-        "probability" : [True],
-        "random_state" : [1]
+        "probability": [True],
+        "random_state": [1],
     }
 
     grid = GridSearchCV(

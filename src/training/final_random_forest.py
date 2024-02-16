@@ -19,7 +19,13 @@ def main():
     X_train = df_train.drop(columns=["booking_status"])
     y_train = df_train["booking_status"]
 
-    model = RandomForestClassifier(criterion="gini", max_depth=16, max_features="sqrt", n_estimators=150, random_state=1)   
+    model = RandomForestClassifier(
+        criterion="gini",
+        max_depth=16,
+        max_features="sqrt",
+        n_estimators=150,
+        random_state=1,
+    )
     logging.info("Model instance created")
 
     model.fit(X_train, y_train)
@@ -28,7 +34,7 @@ def main():
     with open("src/models/random_forest_final.pkl", "wb") as f:
         pickle.dump(model, f)
     logging.info("Model saved")
-    
+
 
 if __name__ == "__main__":
     main()
